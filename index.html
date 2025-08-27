@@ -63,15 +63,15 @@
         }
 
         .time-container {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            display: flex;
+            justify-content: center;
+            align-items: center;
             gap: 15px;
             margin: 30px 0;
             animation: slideUp 0.8s ease-out;
             width: 100%;
-            max-width: 600px;
-            justify-content: center;
-            align-items: center;
+            max-width: 500px;
+            flex-wrap: wrap;
         }
 
         @keyframes slideUp {
@@ -82,14 +82,16 @@
         .time-unit {
             background: linear-gradient(145deg, #f8f9fa, #e9ecef);
             border-radius: 20px;
-            padding: 25px 15px;
+            padding: 20px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            min-height: 120px;
+            width: 100px;
+            height: 100px;
+            flex-shrink: 0;
         }
 
         .time-unit:hover {
@@ -98,13 +100,14 @@
         }
 
         .time-value {
-            font-size: 3em;
+            font-size: 2.1em;
             font-weight: bold;
             background: linear-gradient(45deg, #667eea, #764ba2);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
             animation: pulse 2s ease-in-out infinite;
+            line-height: 1;
         }
 
         @keyframes pulse {
@@ -113,11 +116,12 @@
         }
 
         .time-label {
-            font-size: 1.1em;
+            font-size: 0.75em;
             color: #666;
-            margin-top: 5px;
+            margin-top: 2px;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 0.5px;
+            line-height: 1;
         }
 
         .total-days {
@@ -210,19 +214,19 @@
                 font-size: 1.8em;
             }
             .time-container {
-                grid-template-columns: repeat(4, 1fr);
                 gap: 10px;
                 max-width: 100%;
             }
             .time-unit {
-                padding: 20px 10px;
-                min-height: 100px;
+                width: 65px;
+                height: 65px;
+                padding: 15px;
             }
             .time-value {
-                font-size: 2.2em;
+                font-size: 1.8em;
             }
             .time-label {
-                font-size: 0.9em;
+                font-size: 0.65em;
             }
         }
     </style>
@@ -278,7 +282,7 @@
     <script>
         // CUSTOMIZE YOUR START DATE HERE!
         // Format: Year, Month (0-11), Day, Hour (0-23), Minute, Second
-        const START_DATE = new Date(2025, 6, 3, 18, 0, 0); // January 15, 2024 at 6:30 PM
+        const START_DATE = new Date(2025, 6, 3, 18, 30, 0); // January 15, 2024 at 6:30 PM
         
         // Display elements
         const daysEl = document.getElementById('days');
