@@ -348,10 +348,10 @@
 </head>
 <body>
     <div class="container">
-        <div class="heart-icon">💝</div>
+        <!-- <div class="heart-icon">💝</div> -->
         
         <div class="main-section">
-            <h1 class="title">Time We've Been Together ❤️</h1>
+            <h1 class="title">Time We've Been Together</h1>
             <p class="subtitle">Since <span id="startDateDisplay">July 3, 2025 at 06:30 PM</span></p>
             
             <div class="time-display">
@@ -420,15 +420,96 @@
         
         let startDate = new Date(START_DATE);
         let notes = [
-            { text: "I met Lia in HelloTalk", date: "07/03/2025" },
-            { text: "I insist to start a call in private", date: "07/06/2025" },
-            { text: "Napagalitan dahil narinig na may kausap sa phone", date: "07/07/2025" },
-            { text: "I felt the love very sudden, and I was overthinking if I'm going to hide it and try not to say my feelings for you or should I say it.", date: "07/13/2025" },
-            { text: "Madaling araw nag confess ako sa kanya, at kinaumagahan bago sya umalis ng bahay ay bigla syang umiyak", date: "07/14/2025" },
-            { text: "Nag decide sya na mag-alarm for 11:11(evening), kasi minsan hindi namin namamalayan ang oras", date: "07/19/2025" },
-            { text: "I started to send her bible verse.", date: "07/20/2025" },
-            { text: "Nag promise na hindi daw makakatulog, even though she sounds like very sleepy and she's like about to sleep in any moment.", date: "07/21/2025" },
-            { text: "Hindi ako nakapagsend ng bible verse.", date: "07/23/2025" },
+            {   
+                text: "I met Lia in HelloTalk", 
+                date: "07/03/2025" 
+            },
+            { 
+                text: "I insist to start a call in private", 
+                date: "07/06/2025" 
+            },
+            { 
+                text: "Napagalitan dahil narinig na may kausap sa phone", 
+                date: "07/07/2025" 
+            },
+            { 
+                text: "I felt the love very sudden, and I was overthinking if I'm going to hide it and try not to say my feelings for you or should I say it.", 
+                date: "07/13/2025" 
+            },
+            { 
+                text: "Madaling araw nag confess ako sa kanya, at kinaumagahan bago sya umalis ng bahay ay bigla syang umiyak", 
+                date: "07/14/2025" 
+            },
+            { 
+                text: "Nag decide sya na mag-alarm for 11:11(evening), kasi minsan hindi namin namamalayan ang oras", 
+                date: "07/19/2025" 
+            },
+            { 
+                text: "I started to send her bible verse.", 
+                date: "07/20/2025" 
+            },
+            { 
+                text: "Nag promise na hindi daw makakatulog, even though she sounds like very sleepy and she's like about to sleep in any moment.", 
+                date: "07/21/2025" 
+            },
+            { 
+                text: "Hindi ako nakapagsend ng bible verse.", 
+                date: "07/23/2025" 
+            },
+            { 
+                text:  `• This time whenever I ask Lia if she's going to sleep and if she replied "i dont know" that means she'll fall asleep, but if she said "hinde" that means she won't (base on my understanding, im not convinced yet) <br/>
+                        • Around 3 or 3:30am we start to watch(additionally she asked me if I have Rave app) <br/>
+                        - SuperBook(in the beginning) <br/>
+                        • This is the day that we started to pray and read bible verse together.`, 
+                date: "07/25/2025" 
+            },
+            { 
+                text: `I already knew it that there was something wrong with her so I said "are u okay? mukhang wala ka sa mood ah, napepressure ka ba?" and she admitted it in front of me. She asked me to promise that I won't expect much to her about acads, and yeah I promised (pinky promise).`, 
+                date: "08/02/2025" 
+            },
+            { 
+                text: "I wrote a poem for her, and before that I told her to read the poem before leaving or before the UPCAT exam starts.", 
+                date: "08/03/2025" 
+            },
+            { 
+                text: `Mawawala daw yung puti nya pagsapit ng January hanggang March nag promise pa sya <br/> -Foundation Day`, 
+                date: "08/15/2025" 
+            },
+            { 
+                text: `- Madaling araw ng mag-usap kami ng masinsinan, dahil sa mga sinabi ko bigla syang umiyak, sinasabi ko saknya na mag decide na sya whether she reject me or let me pursue her, hindi sya makapagdecide kaya next time na lang daw pag-usapan. 
+                        Additionally bago natapos ang usapan namin, ang huli kong sinabi ay "Lia, just let me pursue you...wag ka ng aangal, gagawin kong posible yung iniisip mong imposible" <br/>
+                        - while she were sleeping, I made a web app that displays our days that we've been together/known, and I sent her also so she install it to her phone.`, 
+                date: "08/28/2025" 
+            },
+            { 
+                text: `This is the 2nd time na hindi ko nasaksihan ang pag alis nya papuntang school T~T`, 
+                date: "08/29/2025" 
+            },
+            { 
+                text: `Napansin ko na tlga na may something wrong sa actions nya in the past few days, walang gana, na parang hindi ko na din maintindihan`, 
+                date: "09/04/2025" 
+            },
+            { 
+                text: `Masyado akong nag overthink na akala ko tuluyan nya na akong inignore, at to the point na nawalan na akong gana mag aral`, 
+                date: "09/06/2025" 
+            },
+            { 
+                text: `- sa dalawang buwan naming magkausap, ngayon nya lang ako pinakitaan ng middle finger sign accidentally (akala nya si Pia ang kausap nya) <br/> 
+                        - very energetic nya ngayon even though hindi sya nagreply sakin from morning until evening`, 
+                date: "09/07/2025" 
+            },
+            { 
+                text: `For the first time na hindi kami nakapag in-call talk. Ang naging rason ay pumutok na transformer naging sanhi ng pagkawala ng kuryente`, 
+                date: "09/11/2025" 
+            },
+            { 
+                text: `After a long time, ngayon lang ulit kami nagkapag pray ng sabay at nagbasa ng bible verse.`, 
+                date: "09/13/2025" 
+            },
+            { 
+                text: `2nd time na hindi kami nakapag in-call talk, I was waiting to her to call me back before I fell asleep, and I woke up at 2am and I checked if she messaged me and she did saying "done na ko" but she didn't try to call me.`, 
+                date: "09/16/2025" 
+            },
         ];
         
         let messages = [
